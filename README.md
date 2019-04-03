@@ -7,7 +7,9 @@
 
 ## Opis teme:
 
-![alt text](https://github.com/ooad-2018-2019/Grupa7-EnviromentFriendly/blob/master/Resources/AppLogo.png)
+<p align="center">
+  <img src="https://github.com/ooad-2018-2019/Grupa7-EnviromentFriendly/blob/master/Resources/AppLogo.png">
+</p>
 
 U doba kada je sve teže steći bolje i zdravije navike, potrebno je nešto što to može znatno olakšati. Znajući da pravilna ishrana čini stub takvih navika, CalTrek aplikacija omogućuje korisnicima da kroz jednostavnu interakciju sa istom postignu svoje željene ciljeve. Korisnicima je dostupan pregled ishrane kao i vježbi, pri čemu dobijaju detaljan uvid o tome šta se konzumacijom odnosno realizacijom istih postiže.
 
