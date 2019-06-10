@@ -1,8 +1,12 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-image: url(https://img.freepik.com/free-photo/set-sports-attributes_23-2147778577.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Wrapping element */
