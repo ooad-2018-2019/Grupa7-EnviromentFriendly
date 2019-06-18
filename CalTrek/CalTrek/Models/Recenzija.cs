@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CalTrek.Models
 {
-    public class KorisnikTjelovjezba
+    public class Recenzija
     {
         public Klijent Klijent { get; set; }
-        public Tjelovjezba Tjelovjezba { get; set; }
-        public DateTime DatumUnosa { get; set; }
+        public Strucnjak Strucnjak { get; set; }
+        public int Ocjena { get; set; }
+        public String Komentar { get; set; }
     }
 }

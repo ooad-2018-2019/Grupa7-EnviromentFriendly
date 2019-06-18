@@ -1,3 +1,33 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>registracija</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form method="post">
+        <h2 class="sr-only">Login Form</h2><img class="img-fluid" src="~/img/mhsc-logo.png"><small class="form-text text-muted">Enter the info down below.</small>
+        <div class="illustration">
+            <input class="form-control" type="text" name="etFirstName" placeholder="Ime">
+            <input class="form-control" type="text" name="etLastName" placeholder="Prezime">
+            <input class="form-control" type="email" name="etEmail" placeholder="Email">
+            <input class="form-control" type="text" name="etUsername" placeholder="Username">
+            <input class="form-control" type="password" name="etPassword" placeholder="Password">
+            <input class="form-control" type="password" name="etConfirmPassword" placeholder="Potvrdite password">
+        </div>
+        <div class="btn-group" role="group"></div>
+        <div class="btn-group" role="group"></div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" id="btnRegister" type="submit" style="background: #40A15D;">Register</button>
+        </div>
+    </form>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

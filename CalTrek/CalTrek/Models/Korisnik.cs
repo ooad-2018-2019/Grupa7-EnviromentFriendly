@@ -19,35 +19,43 @@ namespace CalTrekApp.Models
             Drzava = drzava;
         }
 
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
+        [Required]
         public string Username
         {
             get; set;
         }
 
+        [Required]
         public string Ime
         {
             get; set;
         }
 
+        [Required]
         public string Prezime
         {
             get; set;
         }
 
+        [Required]
         public DateTime DatumRodjenja
         {
             get; set;
         }
 
+        [Required]
         public char Spol
         {
             get; set;
         }
 
+        [Required]
         public string Grad { get; set; }
 
+        [Required]
         public string Drzava { get; set; }
     }
 }

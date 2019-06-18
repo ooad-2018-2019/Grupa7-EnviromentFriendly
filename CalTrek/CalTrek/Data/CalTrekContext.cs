@@ -21,5 +21,7 @@ namespace CalTrek.Models
         public DbSet<CalTrekApp.Models.Tjelovjezba> Tjelovjezba { get; set; }
 
         public DbSet<CalTrekApp.Models.Strucnjak> Strucnjak { get; set; }
+
+        public DbSet<CalTrekApp.Models.Korisnik> Korisnik { get; set; }
     }
 }

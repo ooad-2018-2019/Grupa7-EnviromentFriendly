@@ -14,11 +14,13 @@ namespace CalTrekApp.Models
             Tip = tip;
         }
 
+        [Required]
         public int GodineIskustva
         {
             get; set;
         }
 
+        [Required]
         public int Tip
         {
             get; set;

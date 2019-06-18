@@ -54,7 +54,7 @@ namespace CalTrek.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GodineIskustva,Tip,Id,Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Strucnjak strucnjak)
+        public async Task<IActionResult> Create([Bind("GodineIskustva,Tip,Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Strucnjak strucnjak)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace CalTrek.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GodineIskustva,Tip,Id,Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Strucnjak strucnjak)
+        public async Task<IActionResult> Edit(int id, [Bind("GodineIskustva,Tip,Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Strucnjak strucnjak)
         {
             if (id != strucnjak.Id)
             {

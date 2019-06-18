@@ -14,13 +14,16 @@ namespace CalTrekApp.Models
             BCPM = bCPM;
         }
 
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
+        [Required]
         public string Naziv
         {
             get; set;
         }
 
+        [Required]
         public float BCPM
         {
             get; set;

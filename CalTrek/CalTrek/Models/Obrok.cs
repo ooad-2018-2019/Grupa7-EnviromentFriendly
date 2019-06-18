@@ -17,28 +17,34 @@ namespace CalTrekApp.Models
             Kalorije = kalorije;
         }
 
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
+        [Required]
         public string Naziv
         {
             get; set;
         }
 
+        [Required]
         public float Proteini
         {
             get; set;
         }
 
+        [Required]
         public float Ugljikohidrati
         {
             get; set;
         }
 
+        [Required]
         public float Masti
         {
             get; set;
         }
 
+        [Required]
         public float Kalorije
         {
             get; set;

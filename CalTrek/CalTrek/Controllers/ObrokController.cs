@@ -19,13 +19,13 @@ namespace CalTrek.Controllers
             _context = context;
         }
 
-        // GET: Obroci
+        // GET: Obrok
         public async Task<IActionResult> Index()
         {
             return View(await _context.Obrok.ToListAsync());
         }
 
-        // GET: Obroci/Details/5
+        // GET: Obrok/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,18 +43,18 @@ namespace CalTrek.Controllers
             return View(obrok);
         }
 
-        // GET: Obroci/Create
+        // GET: Obrok/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Obroci/Create
+        // POST: Obrok/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naziv,Proteini,Ugljikohidrati,Masti,Kalorije")] Obrok obrok)
+        public async Task<IActionResult> Create([Bind("Naziv,Proteini,Ugljikohidrati,Masti,Kalorije")] Obrok obrok)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace CalTrek.Controllers
             return View(obrok);
         }
 
-        // GET: Obroci/Edit/5
+        // GET: Obrok/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,12 +81,12 @@ namespace CalTrek.Controllers
             return View(obrok);
         }
 
-        // POST: Obroci/Edit/5
+        // POST: Obrok/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naziv,Proteini,Ugljikohidrati,Masti,Kalorije")] Obrok obrok)
+        public async Task<IActionResult> Edit(int id, [Bind("Naziv,Proteini,Ugljikohidrati,Masti,Kalorije")] Obrok obrok)
         {
             if (id != obrok.Id)
             {
@@ -116,7 +116,7 @@ namespace CalTrek.Controllers
             return View(obrok);
         }
 
-        // GET: Obroci/Delete/5
+        // GET: Obrok/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +134,7 @@ namespace CalTrek.Controllers
             return View(obrok);
         }
 
-        // POST: Obroci/Delete/5
+        // POST: Obrok/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

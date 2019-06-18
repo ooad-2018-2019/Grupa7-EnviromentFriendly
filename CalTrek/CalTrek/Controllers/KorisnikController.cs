@@ -10,22 +10,22 @@ using CalTrekApp.Models;
 
 namespace CalTrek.Controllers
 {
-    public class KlijentController : Controller
+    public class KorisnikController : Controller
     {
         private readonly CalTrekContext _context;
 
-        public KlijentController(CalTrekContext context)
+        public KorisnikController(CalTrekContext context)
         {
             _context = context;
         }
 
-        // GET: Klijent
+        // GET: Korisnik
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Klijent.ToListAsync());
+            return View(await _context.Korisnik.ToListAsync());
         }
 
-        // GET: Klijent/Details/5
+        // GET: Korisnik/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace CalTrek.Controllers
                 return NotFound();
             }
 
-            var klijent = await _context.Klijent
+            var korisnik = await _context.Korisnik
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (klijent == null)
+            if (korisnik == null)
             {
                 return NotFound();
             }
 
-            return View(klijent);
+            return View(korisnik);
         }
 
-        // GET: Klijent/Create
+        // GET: Korisnik/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Klijent/Create
+        // POST: Korisnik/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Klijent klijent)
+        public async Task<IActionResult> Create([Bind("Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Korisnik korisnik)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(klijent);
+                _context.Add(korisnik);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(klijent);
+            return View(korisnik);
         }
 
-        // GET: Klijent/Edit/5
+        // GET: Korisnik/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace CalTrek.Controllers
                 return NotFound();
             }
 
-            var klijent = await _context.Klijent.FindAsync(id);
-            if (klijent == null)
+            var korisnik = await _context.Korisnik.FindAsync(id);
+            if (korisnik == null)
             {
                 return NotFound();
             }
-            return View(klijent);
+            return View(korisnik);
         }
 
-        // POST: Klijent/Edit/5
+        // POST: Korisnik/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Klijent klijent)
+        public async Task<IActionResult> Edit(int id, [Bind("Username,Ime,Prezime,DatumRodjenja,Spol,Grad,Drzava")] Korisnik korisnik)
         {
-            if (id != klijent.Id)
+            if (id != korisnik.Id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace CalTrek.Controllers
             {
                 try
                 {
-                    _context.Update(klijent);
+                    _context.Update(korisnik);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KlijentExists(klijent.Id))
+                    if (!KorisnikExists(korisnik.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace CalTrek.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(klijent);
+            return View(korisnik);
         }
 
-        // GET: Klijent/Delete/5
+        // GET: Korisnik/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace CalTrek.Controllers
                 return NotFound();
             }
 
-            var klijent = await _context.Klijent
+            var korisnik = await _context.Korisnik
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (klijent == null)
+            if (korisnik == null)
             {
                 return NotFound();
             }
 
-            return View(klijent);
+            return View(korisnik);
         }
 
-        // POST: Klijent/Delete/5
+        // POST: Korisnik/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var klijent = await _context.Klijent.FindAsync(id);
-            _context.Klijent.Remove(klijent);
+            var korisnik = await _context.Korisnik.FindAsync(id);
+            _context.Korisnik.Remove(korisnik);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KlijentExists(int id)
+        private bool KorisnikExists(int id)
         {
-            return _context.Klijent.Any(e => e.Id == id);
+            return _context.Korisnik.Any(e => e.Id == id);
         }
     }
 }
